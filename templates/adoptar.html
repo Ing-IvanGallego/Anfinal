@@ -1,0 +1,45 @@
+
+{% extends "layout.html"%}
+
+{% block perfil %}
+        {{perfil}}
+  {%endblock%}
+
+
+
+      
+      {% block content %}
+        <div class="row justify-content-center align-items-center text-center">
+          <h1>Adoptar</h1>    
+        </div>
+       
+
+
+        <div class="container-fluid">
+          <div class="row">
+
+            {% for contact in mascotas%}
+
+            <div class="col-lg-5 m-3 "  >
+              <div class="row justify-content-center align-items-center text-center">
+                <img src="/static/imagen/{{contact.9}}" height="200" >
+                <a href="/formulario/{{perfil}}/{{contact.0}}" style="color: #000000"> {{contact.1}} </a>
+              </div>
+            </div>
+
+            {%endfor%}
+
+      
+    </div>
+
+  </div> 
+ {%endblock%}
+
+
+ {% block tablero %}
+
+        <div class="row justify-content-center align-items-center text-center" style="background-color:#E0E0E0; color: #000000">
+          <h3>Mensajeria</h3>    
+        </div>
+
+       {% endblock%}

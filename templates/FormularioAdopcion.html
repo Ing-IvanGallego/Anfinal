@@ -1,0 +1,163 @@
+{% extends "layout.html"%}
+
+{% block perfil %}
+        {{perfil}}
+  {%endblock%}
+
+
+
+      
+      {% block content %}
+      <div class="row justify-content-center align-items-center text-center">
+          <h1>Formulario de adopcion</h1>    
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+
+
+            <div class="col-lg-4 m-0 "  >
+              <div class="row justify-content-center align-items-center ">
+                <img src="/static/imagen/{{contact.9}}">
+                 <label>Nombre</label>
+                <p class="form-control">{{contact.1}}</p>
+                 <label>Genero</label> 
+                <p class="form-control">{{contact.2}}</p>
+                  <label>Edad</label>
+                <p class="form-control">{{contact.3}} años</p>
+                <label>Raza</label>
+                <p class="form-control ">{{contact.6}}</p>
+              </div>
+            </div>
+
+            <div class="col-lg-7 m-1 " >
+              <div class="row justify-content-center align-items-center m-3">
+
+                <label>Descripcion</label>
+                  <p class="form-control mx-2 ">{{contact.8}}</p>
+                <label>Telefono encargado</label>
+                  <p class="form-control mx-2">{{contact.5}}</p>
+                <label>Vacunas</label>
+                 <p class="form-control mx-2">{{contact.4}}</p>
+                <label>Direccion</label>
+                  <p class="form-control mx-2">{{contact.7}}</p>
+                <label>Cedula</label>
+                  <p class="form-control mx-2">{{contact.10}}</p>
+              </div>
+            </div>
+
+
+
+        <div class="col-lg-10 m-5 "  style="background-color: #E0E0E0;color: #000000; ">
+         <form action="/solicitud/{{contact.0}}" method="POST" >
+          <div class="form-group">
+            <label class="form-label mt-auto ">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                  Nombre
+                </font>
+              </font>
+            </label>
+            <input type="text" class="form-control" name="nombres" placeholder="Nombre" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label mt-auto ">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                  Apellidos
+                </font>
+              </font>
+            </label>
+            <input type="text" class="form-control" name="apellidos" placeholder="Apellidos" required="">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label mt-auto ">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                  Direccion
+                </font>
+              </font>
+            </label>
+            <input type="text" class="form-control" name="direccion" placeholder="Direccion" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label mt-auto ">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                  Telefono
+                </font>
+              </font>
+            </label>
+             <input type="text" class="form-control" name="telefono" placeholder="Telefono" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label mt-auto ">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                  Email
+                </font>
+              </font>
+            </label>
+            <input type="email" class="form-control" name="email" placeholder="Correo electronico" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label mt-auto ">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                  Razon de adopcion
+                </font>
+              </font>
+            </label>
+            <input type="text" class="form-control" name="razon" placeholder="Razo de adopcion" required>
+          </div>
+
+          
+
+          <div class="form-group text-center">
+            <div class="form-check-inline">
+             </div>
+          </div>
+          <div class="form-group">
+            <div class="container">
+
+
+              <div class="row">
+
+                <div class="col m-1">
+                  <a title="ensayo" href="#">
+                    <font style="vertical-align: inherit;">
+                      <button type="submit" class=" col-12 btn btn-primary float-letf " alt="ensayo">
+                        <font style="vertical-align: inherit;">
+                          <font style="vertical-align: inherit;">Enviar Solicitud</font>
+                        </font>
+                      </button> 
+                    </font>
+                 </a>
+                </div>
+
+
+
+                <div class="col m-1">
+                  <a title="ensayo" href="adoptar.html">
+                    <font style="vertical-align: inherit;">
+                      <button type="button" class=" col-12 btn btn-danger float-letf " alt="ensayo">
+                        <font style="vertical-align: inherit;">
+                          <font style="vertical-align: inherit;">Cancelar</font>
+                        </font>
+                      </button> 
+                    </font>
+                 </a>
+                </div>          
+              </div>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+      </div>
+
+{%endblock%}

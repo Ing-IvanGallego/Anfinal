@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Adoptar</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/estilo.css')}}">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a title="Los Tejos" href=""><font style="vertical-align: inherit;"> <img src="{{url_for('static',filename='imagen/fondo.png')}}" alt="Los Tejos"  width="55" height="55" class="mx-2" /> </font></font></a>
+
+    <p class="btn btn-light my-2 my-sm-0 mx-2"> <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> {% block perfil %}
+       {% endblock%} </font></font></P>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Navegación de palanca">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Inicio
+            </font></font><span class="visually-hidden"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/perfil"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ventas</font></font></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/perfil"> <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adoptar</font></font></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/perfil"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dar en adopcion</font></font></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/perfil"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Perfil</font></font></a>
+        </li>
+        
+      </ul>
+      
+
+      <img src="{{url_for('static',filename='imagen/logo.jpg')}}" width="55" height="55" class="mx-2">
+      <p class="btn btn-light my-2 my-sm-0 mx-2"> <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ANFINAL </font></font></P>
+
+      <a class="nav-item mx-2" href="https://wa.me/573205778314"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><img src="{{url_for('static',filename='imagen/whatapp.png')}}"></font></font></a>
+
+      <a class="nav-item mx-2" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><img src="{{url_for('static',filename='imagen/facebook.png')}}"></font></font></a>
+      <a class="nav-item mx-2" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><img src="{{url_for('static',filename='imagen/intagram.png')}}"></font></font></a>
+    </div>
+    </div>
+    </div>
+  </div>
+</nav>
+
+
+</head>
+<body>
+
+<body >
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2 text-center m-5" style="background-color:#ccc">
+        <h2 style="background-color:#FFFFFF ">Publicidad</h2> 
+        <p>Esto es una prueba donde apaarecera la publicicdad.</p>
+      </div>
+
+      <div class="col-lg-6 m-3 "  style="background-image:url({{url_for('static', filename='imagen/fondo.jpg')}}); background-size: cover; background-repeat:no-repeat;background-position: center center;">
+
+       {% block content %}
+       {% endblock%}
+
+      </div>
+
+
+      <div class="col-lg-2 text-center m-5"  style="background-color:#ccc ">
+        <h2>Tablero</h2> 
+        <p>Esto es una prueba del tablero.</p>
+
+        {% with messages =get_flashed_messages() %}
+  {% if messages %}
+  {%for message in messages%}
+
+
+        {% block tablero %}
+
+
+       {% endblock%}
+
+    <div class="alert alert-dismissible alert-primary">
+  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">¡Oh cielos! </font></font></strong> <a href="#" class="alert-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><p>{{message}}</p>
+</font></font></div>
+    
+  {%endfor%}
+  {%endif%}
+  {%endwith%}
+      </div>
+      
+    </div>
+
+  </div> 
+
+<script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+
+</body>
+</html>

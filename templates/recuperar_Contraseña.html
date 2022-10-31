@@ -1,0 +1,67 @@
+{% extends "layout.html"%}
+
+{% block perfil %}
+		Perfil
+  {%endblock%}
+
+
+ {% block content %}
+        <div class="row justify-content-center align-items-center text-center">
+          <h1>Recuperar clave</h1>    
+        </div>
+        <form action="/envioContraseñaCorreo", method="POST">
+
+        <div class="form-group">
+          <label class="form-label mt-auto ">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Usuario
+              </font>
+            </font>
+          </label>
+          <input type="email" class="form-control" placeholder="Correo" name="usuario" required>
+        </div>
+
+
+    <div class="form-group text-center">
+         <div class="form-check-inline">
+           </div>
+     </div>
+        <div class="form-group">
+          <div class="container">
+
+
+            <div class="row">
+
+              <div class="col">
+                <a title="ensayo" href="A.html">
+                  <font style="vertical-align: inherit;">
+                    <button type="submit" class=" col-6 btn btn-primary float-letf m-3 " alt="ensayo">
+                      <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Aceptar</font>
+                      </font>
+                    </button> 
+                  </font>
+               </a>
+              </div>
+
+
+
+              <div class="col">
+                <a title="ensayo" href="A.html">
+                  <font style="vertical-align: inherit;">
+                    <button type="button" class=" col-6 btn btn-danger float-letf  m-3" alt="ensayo">
+                      <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Cancelar</font>
+                      </font>
+                    </button> 
+                  </font>
+               </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </form>
+  {%endblock%}
+     

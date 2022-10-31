@@ -1,0 +1,91 @@
+{% extends "layout.html"%}
+
+{% block perfil %}
+        {{perfil}}
+  {%endblock%}
+
+ {% block content %}
+  <div class="row justify-content-center align-items-center text-center">
+    <h1>Iniciar sesion</h1>    
+  </div>
+        
+  <form action="/login" method="POST">
+
+
+        <div class="form-group">
+          <label class="form-label mt-auto ">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Usuario
+              </font>
+            </font>
+          </label>
+          <input type="text" class="form-control" placeholder="Usuario" name="usuario" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label mt-auto ">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Contraseña
+              </font>
+            </font>
+          </label>
+          <input type="password" class="form-control" placeholder="contraseña" name="contraseña" required>
+        </div>
+
+        <div class="col-auto">
+		 			<a href="/recuperara_Contraseña">Olvide la contraseña</a></br>
+		 		</div>
+
+    <div class="form-group text-center">
+         <div class="form-check-inline">
+           </div>
+     </div>
+        <div class="form-group">
+          <div class="container">
+
+
+            <div class="row">
+
+              <div class="col">
+                  <font style="vertical-align: inherit;">
+                    <button type="submit" class=" col-6 btn btn-primary float-letf " alt="ensayo">
+                      <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Aceptar</font>
+                      </font>
+                    </button> 
+                  </font>
+              </div>
+
+
+
+              <div class="col">
+                <a title="ensayo" href="/">
+                  <font style="vertical-align: inherit;">
+                    <button type="button" class=" col-6 btn btn-danger float-letf " alt="ensayo">
+                      <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Cancelar</font>
+                      </font>
+                    </button> 
+                  </font>
+               </a>
+              </div>
+
+              <div class="col">
+                <a title="ensayo" href="/registro">
+                  <font style="vertical-align: inherit;">
+                    <button type="button" class=" col-6 btn btn-success float-ceter " alt="ensayo">
+                      <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Registrarse</font>
+                      </font>
+                    </button> 
+                  </font>
+               </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </form>
+{% endblock %}

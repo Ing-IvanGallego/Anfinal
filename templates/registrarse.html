@@ -1,0 +1,151 @@
+{% extends "layout.html"%}
+
+{% block perfil %}
+        {{contact}}
+  {%endblock%}
+
+ {% block content %}
+        <div class="row justify-content-center align-items-center text-center">
+          <h1>Registrarse</h1>    
+        </div>
+        <form action=" /add_contact" method="POST" enctype="multipart/form-data">
+
+
+        <div class="form-group">
+          <label class="form-label mt-auto ">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Nombres
+              </font>
+            </font>
+          </label>
+          <input type="text" class="form-control"  name="nombres" placeholder="Nombre" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label mt-auto ">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Apellidos
+              </font>
+            </font>
+          </label>
+          <input type="text" class="form-control" name="apellidos" placeholder="Apellidos" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label mt-auto ">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Cedula
+              </font>
+            </font>
+          </label>
+          <input type="text" class="form-control" name="cedula" placeholder="Apellidos" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label mt-auto ">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Direccion
+              </font>
+            </font>
+          </label>
+          <input type="text" class="form-control" name="direccion" placeholder="Direccion" required>
+        </div>
+
+
+        <div class="form-group">
+          <label class="form-label mt-auto ">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Email
+              </font>
+            </font>
+          </label>
+          <input type="email" class="form-control" name="email" placeholder="Correo electronico" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label mt-auto ">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                telefono
+              </font>
+            </font>
+          </label>
+          <input type="text" class="form-control" name="telefono" placeholder="telefono" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label mt-auto ">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Contraseña
+              </font>
+            </font>
+          </label>
+          <input type="password" class="form-control" name="contraseña" placeholder="Contraseña" required>
+        </div>
+
+        <div class="form-check ">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                    <label class="form-check-label" for="flexCheckDefault">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">
+                                <a href="#">Acepto terminos y condiciones</a>
+                            </font>
+                        </font>
+                    </label>
+              </div>
+
+        <div class="form-group text-center">
+          <div class="form-check-inline">
+           </div>
+        </div>
+        <div class="form-group">
+          <div class="container">
+
+
+            <div class="row">
+
+              <div class="col">
+                  <font style="vertical-align: inherit;">
+                    <button type="submit" class=" col-6 btn btn-primary float-letf " alt="ensayo">
+                      <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Aceptar</font>
+                      </font>
+                    </button> 
+                  </font>
+              </div>
+
+              <div class="col">
+                <a title="ensayo" href="/perfil">
+                  <font style="vertical-align: inherit;">
+                    <button type="button" class=" col-6 btn btn-danger float-letf " alt="ensayo">
+                      <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Cancelar</font>
+                      </font>
+                    </button> 
+                  </font>
+               </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+

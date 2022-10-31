@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+	<form id="miformulario" onsubmit="verificarPasswords(); return false">
+    <div class="form-group">
+        <label for="usuario">Usuario</label>
+        <input type="text" class="form-control" id="usuario" value="usuariogenial" required>
+    </div>
+    <div class="form-group">
+        <label for="pass1">Contraseña</label>
+        <input type="password" class="form-control" id="pass1" required>
+    </div>
+    <div class="form-group">
+        <label for="pass2">Vuelve a escribir la Contraseña</label>
+        <input type="password" class="form-control" id="pass2" required>
+    </div>
+
+    <button type="submit" id="login" class="btn btn-primary">Login</button>
+</form>
+<script src="java.js"></script>
+</body>
+</html>
